@@ -87,11 +87,26 @@
 
         <div class="dialog-overlay hide" id="reset-scores-dialog" aria-hidden="true">
             <div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="reset-scores-title" aria-describedby="reset-scores-desc">
+                <div class="dialog-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                        <path d="M3 6h18M9 6V4.75A1.75 1.75 0 0 1 10.75 3h2.5A1.75 1.75 0 0 1 15 4.75V6m-7 0 .72 12.21A1.75 1.75 0 0 0 10.47 20h3.06a1.75 1.75 0 0 0 1.75-1.79L16 6m-7 0h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <h2 id="reset-scores-title">Reset Scores?</h2>
                 <p id="reset-scores-desc">This will permanently clear all game statistics.</p>
                 <div class="dialog-actions">
-                    <button type="button" id="reset-scores-cancel">Cancel</button>
-                    <button type="button" id="reset-scores-confirm">Reset</button>
+                    <button type="button" id="reset-scores-cancel">
+                        <svg class="dialog-button-icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M18 6 6 18M6 6l12 12" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/>
+                        </svg>
+                        <span>Cancel</span>
+                    </button>
+                    <button type="button" id="reset-scores-confirm">
+                        <svg class="dialog-button-icon" viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                            <path d="M3 6h18M9 6V4.75A1.75 1.75 0 0 1 10.75 3h2.5A1.75 1.75 0 0 1 15 4.75V6m-7 0 .72 12.21A1.75 1.75 0 0 0 10.47 20h3.06a1.75 1.75 0 0 0 1.75-1.79L16 6m-7 0h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>Reset</span>
+                    </button>
                 </div>
             </div>
         </div>

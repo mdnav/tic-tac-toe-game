@@ -383,6 +383,9 @@ const openResetScoresDialog = () => {
 
   resetScoresDialog.classList.remove("hide");
   resetScoresDialog.setAttribute("aria-hidden", "false");
+  requestAnimationFrame(() => {
+    resetScoresCancelBtn?.focus();
+  });
 };
 
 const closeResetScoresDialog = () => {
@@ -390,6 +393,7 @@ const closeResetScoresDialog = () => {
 
   resetScoresDialog.classList.add("hide");
   resetScoresDialog.setAttribute("aria-hidden", "true");
+  resetScoresBtn?.focus();
 };
 
 const resetScores = () => {

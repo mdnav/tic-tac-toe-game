@@ -409,50 +409,135 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1.5rem;
+  background: rgba(0,0,0,0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 220ms ease-out, background-color 220ms ease-out, visibility 0s linear 220ms;
+}
+
+#reset-scores-dialog:not(.hide) {
   background: rgba(0,0,0,0.28);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 220ms ease-out, background-color 220ms ease-out;
+}
+
+#reset-scores-dialog.hide {
+  display: flex;
 }
 
 .dialog-card {
-  width: min(92vw, 26rem);
+  width: min(92vw, 30rem);
   border-radius: 24px;
-  background: rgba(255,255,255,0.96);
+  background: rgba(255,255,255,0.97);
   box-shadow:
-    0 22px 44px rgba(37, 28, 73, 0.14),
-    0 4px 10px rgba(37, 28, 73, 0.08);
-  padding: 1.5rem 1.4rem 1.25rem;
+    0 28px 56px rgba(37, 28, 73, 0.16),
+    0 8px 18px rgba(37, 28, 73, 0.09);
+  padding: 2.15rem 2rem 1.95rem;
   text-align: center;
+  transform: translateY(10px) scale(0.975);
+  opacity: 0.98;
+  transition: transform 240ms ease-out, box-shadow 240ms ease-out, opacity 240ms ease-out;
+}
+
+#reset-scores-dialog:not(.hide) .dialog-card {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.dialog-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+}
+
+.dialog-icon svg {
+  width: 1.85rem;
+  height: 1.85rem;
 }
 
 .dialog-card h2 {
-  font-size: clamp(1.2rem, 2vw, 1.35rem);
+  font-size: clamp(2.15rem, 3.8vw, 2.35rem);
   font-weight: 800;
-  margin-bottom: 0.65rem;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
 }
 
 .dialog-card p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba(27, 27, 27, 0.8);
-  margin-bottom: 1.25rem;
+  width: min(70%, 22rem);
+  margin: 0 auto 1.75rem;
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: rgba(27, 27, 27, 0.72);
 }
 
 .dialog-actions {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1.75rem;
+  margin-top: 0.25rem;
+  flex-wrap: wrap;
 }
 
 .dialog-actions button {
-  min-width: 6.8rem;
+  min-width: 10rem;
+  min-height: 3.4rem;
+  padding: 0.85rem 1.1rem;
+  border-radius: 14px;
+  border: none;
+  color: #fff;
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 10px 22px rgba(37, 28, 73, 0.14);
+  transition: transform 220ms ease-out, box-shadow 220ms ease-out, filter 220ms ease-out;
+}
+
+.dialog-actions button:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 16px 30px rgba(37, 28, 73, 0.18);
+  filter: brightness(1.02);
+}
+
+.dialog-actions button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.dialog-actions button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 4px rgba(255, 255, 255, 0.65),
+    0 0 0 7px rgba(124, 58, 237, 0.24),
+    0 10px 22px rgba(37, 28, 73, 0.14);
+}
+
+.dialog-button-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
 }
 
 .dialog-actions #reset-scores-confirm {
-  background: #eb7f5b;
+  background: linear-gradient(145deg, #fb7185 0%, #f97316 100%);
 }
 
 .dialog-actions #reset-scores-cancel {
-  background: #7f69da;
+  background: linear-gradient(145deg, #8b5cf6 0%, #7c3aed 100%);
 }
 
 .hide {
@@ -491,6 +576,26 @@ main {
 
   .buttons button {
     margin-left: 0;
+  }
+
+  .dialog-card {
+    width: min(94vw, 30rem);
+    padding: 1.85rem 1.35rem 1.5rem;
+  }
+
+  .dialog-card p {
+    width: min(88%, 22rem);
+  }
+
+  .dialog-actions {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .dialog-actions button {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
   }
 
   .mode-buttons {
