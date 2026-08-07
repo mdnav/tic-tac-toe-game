@@ -10,25 +10,53 @@
     <main>
         <h1>TIC TAC TOE</h1>
 
-        <div class="controls">
-            <div class="turn">Turn: <span id="turn-indicator">X</span></div>
-            <div class="buttons">
-                <button id="new-btn">New Game</button>
-                <button id="reset-btn">Reset</button>
+        <div class="mode-panel" id="mode-panel">
+            <p class="mode-title">Choose Game Mode</p>
+            <div class="mode-buttons">
+                <button type="button" id="two-player-btn" data-mode="two-player">👥 Two Players</button>
+                <button type="button" id="computer-btn" data-mode="computer">🤖 Play vs Computer</button>
             </div>
         </div>
 
-        <div class="container">
-            <div class="game">
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
-                <button class="box"></button>
+        <div class="game-shell hide" id="game-shell">
+            <div class="controls">
+                <div class="turn">Turn: <span id="turn-indicator">X</span></div>
+                <div class="buttons">
+                    <button id="new-btn">Restart Game</button>
+                    <button id="reset-btn">Change Mode</button>
+                </div>
+            </div>
+
+            <div class="scoreboard">
+                <div class="scoreboard-row">
+                    <div class="score-card">
+                        <span id="score-x-label">X Wins</span>
+                        <strong id="score-x">0</strong>
+                    </div>
+                    <div class="score-card">
+                        <span id="score-o-label">O Wins</span>
+                        <strong id="score-o">0</strong>
+                    </div>
+                    <div class="score-card">
+                        <span id="score-draw-label">Draws</span>
+                        <strong id="score-draws">0</strong>
+                    </div>
+                </div>
+                <div class="score-meta">Total Games: <span id="total-games">0</span></div>
+            </div>
+
+            <div class="container">
+                <div class="game">
+                    <button class="box" aria-label="Board cell 1"></button>
+                    <button class="box" aria-label="Board cell 2"></button>
+                    <button class="box" aria-label="Board cell 3"></button>
+                    <button class="box" aria-label="Board cell 4"></button>
+                    <button class="box" aria-label="Board cell 5"></button>
+                    <button class="box" aria-label="Board cell 6"></button>
+                    <button class="box" aria-label="Board cell 7"></button>
+                    <button class="box" aria-label="Board cell 8"></button>
+                    <button class="box" aria-label="Board cell 9"></button>
+                </div>
             </div>
         </div>
 
