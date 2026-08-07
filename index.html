@@ -11,13 +11,29 @@
 </head>
 <body>
     <main>
-        <h1 class="hero-title">TIC TAC TOE</h1>
+        <h1 class="hero-title">
+            <span class="hero-ornament hero-ornament-left" aria-hidden="true">X</span>
+            <span class="hero-title-text">TIC TAC TOE</span>
+            <span class="hero-ornament hero-ornament-right" aria-hidden="true">O</span>
+        </h1>
 
         <div class="mode-panel" id="mode-panel">
             <p class="mode-title">Choose Game Mode</p>
             <div class="mode-buttons">
-                <button type="button" id="two-player-btn" data-mode="two-player">👥 Two Players</button>
-                <button type="button" id="computer-btn" data-mode="computer">🤖 Play vs Computer</button>
+                <button type="button" id="two-player-btn" data-mode="two-player" class="mode-card">
+                    <span class="mode-card-decoration" aria-hidden="true"></span>
+                    <span class="mode-card-decoration-alt" aria-hidden="true"></span>
+                    <span class="mode-card-icon" aria-hidden="true">👥</span>
+                    <span class="mode-card-title">Two Players</span>
+                    <span class="mode-card-subtitle">Classic local play</span>
+                </button>
+                <button type="button" id="computer-btn" data-mode="computer" class="mode-card">
+                    <span class="mode-card-decoration" aria-hidden="true"></span>
+                    <span class="mode-card-decoration-alt" aria-hidden="true"></span>
+                    <span class="mode-card-icon" aria-hidden="true">🤖</span>
+                    <span class="mode-card-title">Play vs Computer</span>
+                    <span class="mode-card-subtitle">Challenge the AI</span>
+                </button>
             </div>
         </div>
 
