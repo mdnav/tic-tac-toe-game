@@ -5,10 +5,14 @@ const msgContainer = document.querySelector(".msg-container");
 const msg = document.querySelector("#msg");
 const turnIndicator = document.querySelector("#turn-indicator");
 const playAgainBtn = document.querySelector("#play-again");
+const resetScoresBtn = document.querySelector("#reset-scores-btn");
 const modePanel = document.querySelector("#mode-panel");
 const gameShell = document.querySelector("#game-shell");
 const twoPlayerBtn = document.querySelector("#two-player-btn");
 const computerBtn = document.querySelector("#computer-btn");
+const resetScoresDialog = document.querySelector("#reset-scores-dialog");
+const resetScoresCancelBtn = document.querySelector("#reset-scores-cancel");
+const resetScoresConfirmBtn = document.querySelector("#reset-scores-confirm");
 const scoreXLabel = document.querySelector("#score-x-label");
 const scoreOLabel = document.querySelector("#score-o-label");
 const scoreDrawLabel = document.querySelector("#score-draw-label");
@@ -113,6 +117,16 @@ const updateScoreboard = () => {
   scoreXLabel.innerText = isComputerMode ? "Player Wins" : "X Wins";
   scoreOLabel.innerText = isComputerMode ? "Computer Wins" : "O Wins";
   scoreDrawLabel.innerText = "Draws";
+  scoreX.innerText = scores.x;
+  scoreO.innerText = scores.o;
+  scoreDraws.innerText = scores.draws;
+  totalGames.innerText = state.totalGames;
+};
+
+const updateStatisticsOnly = () => {
+  if (!state.mode) return;
+
+  const scores = getCurrentScores();
   scoreX.innerText = scores.x;
   scoreO.innerText = scores.o;
   scoreDraws.innerText = scores.draws;
@@ -364,6 +378,29 @@ const openModePicker = () => {
   updateScoreboard();
 };
 
+const openResetScoresDialog = () => {
+  if (!state.mode || !resetScoresDialog) return;
+
+  resetScoresDialog.classList.remove("hide");
+  resetScoresDialog.setAttribute("aria-hidden", "false");
+};
+
+const closeResetScoresDialog = () => {
+  if (!resetScoresDialog) return;
+
+  resetScoresDialog.classList.add("hide");
+  resetScoresDialog.setAttribute("aria-hidden", "true");
+};
+
+const resetScores = () => {
+  if (!state.mode) return;
+
+  state.scores[state.mode] = { x: 0, o: 0, draws: 0 };
+  state.totalGames = 0;
+  saveState();
+  updateStatisticsOnly();
+};
+
 const resetBoard = () => {
   if (!state.mode) return;
 
@@ -410,7 +447,20 @@ const initGame = () => {
 if (newGameBtn) newGameBtn.addEventListener("click", resetBoard);
 if (resetBtn) resetBtn.addEventListener("click", openModePicker);
 if (playAgainBtn) playAgainBtn.addEventListener("click", resetBoard);
+if (resetScoresBtn) resetScoresBtn.addEventListener("click", openResetScoresDialog);
 if (twoPlayerBtn) twoPlayerBtn.addEventListener("click", () => startGame(GAME_MODES.TWO_PLAYER));
 if (computerBtn) computerBtn.addEventListener("click", () => startGame(GAME_MODES.COMPUTER));
+if (resetScoresCancelBtn) resetScoresCancelBtn.addEventListener("click", closeResetScoresDialog);
+if (resetScoresConfirmBtn) {
+  resetScoresConfirmBtn.addEventListener("click", () => {
+    resetScores();
+    closeResetScoresDialog();
+  });
+}
+if (resetScoresDialog) {
+  resetScoresDialog.addEventListener("click", (event) => {
+    if (event.target === resetScoresDialog) closeResetScoresDialog();
+  });
+}
 
 initGame();

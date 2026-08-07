@@ -259,6 +259,12 @@ main {
 .buttons button {
   margin-left: 0.5rem;
 }
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
 .scoreboard {
   padding: clamp(1rem, 2vw, 1.15rem);
 }
@@ -337,6 +343,7 @@ main {
 }
 #reset-btn,
 #new-btn,
+#reset-scores-btn,
 #play-again {
   padding: 0.6rem 1rem;
   font-size: 1rem;
@@ -349,6 +356,7 @@ main {
 }
 #reset-btn:hover,
 #new-btn:hover,
+#reset-scores-btn:hover,
 #play-again:hover,
 .mode-buttons button:hover {
   transform: translateY(-2px) scale(1.02);
@@ -357,6 +365,7 @@ main {
 .mode-buttons button:hover,
 #reset-btn:hover,
 #new-btn:hover,
+#reset-scores-btn:hover,
 #play-again:hover {
   box-shadow: 0 10px 18px rgba(0,0,0,0.08);
 }
@@ -364,6 +373,7 @@ main {
 .mode-buttons button:focus-visible,
 #reset-btn:focus-visible,
 #new-btn:focus-visible,
+#reset-scores-btn:focus-visible,
 #play-again:focus-visible,
 .box:focus-visible {
   outline: 2px solid rgba(124, 102, 214, 0.35);
@@ -391,6 +401,58 @@ main {
   flex-direction: column;
   gap: 1.5rem;
   background: rgba(0,0,0,0.35);
+}
+
+.dialog-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0,0,0,0.28);
+}
+
+.dialog-card {
+  width: min(92vw, 26rem);
+  border-radius: 24px;
+  background: rgba(255,255,255,0.96);
+  box-shadow:
+    0 22px 44px rgba(37, 28, 73, 0.14),
+    0 4px 10px rgba(37, 28, 73, 0.08);
+  padding: 1.5rem 1.4rem 1.25rem;
+  text-align: center;
+}
+
+.dialog-card h2 {
+  font-size: clamp(1.2rem, 2vw, 1.35rem);
+  font-weight: 800;
+  margin-bottom: 0.65rem;
+}
+
+.dialog-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(27, 27, 27, 0.8);
+  margin-bottom: 1.25rem;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.dialog-actions button {
+  min-width: 6.8rem;
+}
+
+.dialog-actions #reset-scores-confirm {
+  background: #eb7f5b;
+}
+
+.dialog-actions #reset-scores-cancel {
+  background: #7f69da;
 }
 
 .hide {

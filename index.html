@@ -43,6 +43,7 @@
                 <div class="buttons">
                     <button id="new-btn">Restart Game</button>
                     <button id="reset-btn">Change Mode</button>
+                    <button id="reset-scores-btn">Reset Scores</button>
                 </div>
             </div>
 
@@ -82,6 +83,17 @@
         <div class="msg-container hide">
             <div id="msg"></div>
             <button id="play-again">Play Again</button>
+        </div>
+
+        <div class="dialog-overlay hide" id="reset-scores-dialog" aria-hidden="true">
+            <div class="dialog-card" role="dialog" aria-modal="true" aria-labelledby="reset-scores-title" aria-describedby="reset-scores-desc">
+                <h2 id="reset-scores-title">Reset Scores?</h2>
+                <p id="reset-scores-desc">This will permanently clear all game statistics.</p>
+                <div class="dialog-actions">
+                    <button type="button" id="reset-scores-cancel">Cancel</button>
+                    <button type="button" id="reset-scores-confirm">Reset</button>
+                </div>
+            </div>
         </div>
     </main>
     <script src="app.js"></script>
