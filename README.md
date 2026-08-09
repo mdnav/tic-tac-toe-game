@@ -1,429 +1,278 @@
-<div align="center">
-
 # ❌⭕ Tic Tac Toe
 
-### Classic Strategy Game • Interactive Gameplay • Responsive Design
+### A polished, responsive browser game built with HTML, CSS & JavaScript
 
-*A modern and responsive **Tic Tac Toe** web application built using **HTML5**, **CSS3**, and **JavaScript**. The project demonstrates game-state management, winner detection algorithms, DOM manipulation, event handling, and responsive frontend development through an engaging two-player gaming experience.*
+A modern **Tic Tac Toe web application** designed around interactive gameplay, clean UI, and practical JavaScript engineering.
 
-<br>
+The application supports **Two Player** and **Single Player** modes, real-time game-state management, winner and draw detection, score tracking, game controls, and responsive gameplay across devices.
 
-[![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Play_Now-00C853?style=for-the-badge)](https://tic-tac-toe-game-11.vercel.app/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
-](#)
-[![Status](https://img.shields.io/badge/Status-Completed-blue?style=for-the-badge)](#)
+<p align="center">
 
-</div>
+<a href="https://tic-tac-toe-game-11.vercel.app/">
+<img src="https://img.shields.io/badge/🎮%20LIVE%20DEMO-PLAY%20NOW-0A7A4B?style=for-the-badge" alt="Live Demo">
+</a>
 
----
+<a href="https://github.com/mohammadnaveed1701-source/tic-tac-toe-game">
+<img src="https://img.shields.io/badge/💻%20SOURCE%20CODE-GITHUB-181717?style=for-the-badge&logo=github" alt="Source Code">
+</a>
 
-# 📖 Overview
-
-**Tic Tac Toe** is a browser-based implementation of the classic two-player strategy game where players compete by placing **X** and **O** symbols on a 3×3 grid.
-
-Built with **HTML5**, **CSS3**, and **JavaScript**, the application focuses on delivering an engaging user experience while implementing core programming concepts such as **game-state management**, **winner detection algorithms**, **DOM manipulation**, **event handling**, and **conditional logic**.
-
-The project demonstrates how JavaScript can be used to build interactive browser applications with real-time updates, responsive interfaces, and efficient game logic.
+</p>
 
 ---
 
-# 🎯 Project Goals
+## 🎮 Experience the Game
 
-- Build an interactive browser-based game.
-- Strengthen JavaScript problem-solving skills.
-- Implement efficient game-state management.
-- Practice DOM manipulation and event handling.
-- Design a responsive and user-friendly interface.
-- Create a portfolio-ready JavaScript project.
+### 👥 Two Player Mode
 
----
+Play locally with another player on the same device.
 
-# ✨ Features
+### 🤖 Single Player Mode
 
-## 🎮 Interactive Gameplay
+Challenge the computer-controlled opponent in a solo match.
 
-- Two-player mode
-- Turn-based gameplay
-- Real-time board updates
-- Instant move validation
+### 📊 Match Tracking
 
----
+Keep track of:
 
-## 🏆 Winner Detection
+* ❌ X Wins
+* ⭕ O Wins
+* 🤝 Draws
+* 🎮 Total Games
 
-- Automatic winner checking
-- Eight predefined winning combinations
-- Winning cell highlighting
-- Instant winner announcement
+### 🔄 Complete Game Controls
+
+* Restart the current game
+* Change game mode
+* Reset match statistics
+* Start a new game after completion
 
 ---
 
-## 🤝 Draw Detection
+# 📸 Preview
 
-- Automatic tie detection
-- Game completion handling
-- Prevents additional moves after game completion
+<p align="center">
+  <img src="YOUR_SCREENSHOT_URL_HERE" alt="Tic Tac Toe Game Preview" width="850">
+</p>
 
----
-
-## 🔄 Game Controls
-
-- New Game button
-- Reset Game button
-- Play Again functionality
-- Instant board reset
+> Replace the image above with a screenshot or GIF from the deployed application.
 
 ---
 
-## 🎯 Turn Management
+# 💡 What I Built
 
-- Dynamic player switching
-- Live turn tracking
-- Real-time status updates
+This project goes beyond rendering a 3×3 board.
 
----
-
-## 🎨 Modern User Interface
-
-- Clean layout
-- Interactive buttons
-- Smooth hover animations
-- Modern typography
-- Responsive design
-- User-friendly interface
-
----
-
-## 📱 Fully Responsive
-
-Optimized for:
-
-- 💻 Desktop
-- 🖥️ Laptop
-- 📱 Tablet
-- 📲 Mobile Devices
-
----
-
-# 🛠️ Tech Stack
-
-## Frontend
-
-- HTML5
-- CSS3
-- JavaScript (ES6)
-
----
-
-## JavaScript Concepts
-
-- DOM Manipulation
-- Event Handling
-- Conditional Logic
-- Arrays
-- Loops
-- Functions
-- State Management
-- Algorithm Implementation
-
----
-
-## Development Tools
-
-- Visual Studio Code
-- Git
-- GitHub
-- Vercel
-
----
-
-# 🏗️ Application Workflow
+I built the application around a complete game lifecycle:
 
 ```text
-Start Game
-      │
-      ▼
-Player X Turn
-      │
-      ▼
-Player Selects Cell
-      │
-      ▼
+User Action
+     ↓
 Validate Move
-      │
-      ▼
-Update Game Board
-      │
-      ▼
-Check Winning Patterns
-      │
-      ▼
- ┌───────────────┐
- │ Winner Found? │
- └──────┬────────┘
-        │
-   Yes  ▼         No
-Show Winner     Check Draw
-   │                │
-   ▼                ▼
-End Game     Switch Player
-                     │
-                     ▼
-               Continue Playing
+     ↓
+Update Game State
+     ↓
+Update Interface
+     ↓
+Check Winning Conditions
+     ↓
+Check Draw Condition
+     ↓
+Update Score
+     ↓
+Continue / End Game
 ```
 
----
-
-# ⚙️ Core Functionalities
-
-## 🎮 Turn-Based Gameplay
-
-Players alternate turns between **Player X** and **Player O**. Each move is validated before updating the board, ensuring that occupied cells cannot be selected again.
+In **Single Player Mode**, the application also manages the computer's turn before returning control to the player.
 
 ---
 
-## 🏆 Winner Detection Algorithm
+# 🧠 Game Logic
 
-The application evaluates eight predefined winning combinations after every move.
+After every valid move, the application evaluates the board against the possible winning patterns.
 
 ```text
 Rows
-[0,1,2]
-[3,4,5]
-[6,7,8]
+
+[0, 1, 2]
+[3, 4, 5]
+[6, 7, 8]
+
 
 Columns
-[0,3,6]
-[1,4,7]
-[2,5,8]
+
+[0, 3, 6]
+[1, 4, 7]
+[2, 5, 8]
+
 
 Diagonals
-[0,4,8]
-[2,4,6]
+
+[0, 4, 8]
+[2, 4, 6]
 ```
 
-When three matching symbols occupy any valid row, column, or diagonal:
+The game then determines whether the current state represents:
 
-- Winner is announced
-- Winning cells are highlighted
-- Gameplay is disabled
+```text
+              GAME STATE
+                   │
+          ┌────────┼────────┐
+          ▼        ▼        ▼
+        WIN      DRAW    CONTINUE
+          │        │        │
+          ▼        ▼        ▼
+       Update    Update    Switch
+       Score     Draws     Player
+```
+
+This keeps the gameplay flow predictable and prevents invalid interactions after a match has finished.
 
 ---
 
-## 🤝 Draw Detection
+# 🛠️ Technology Stack
 
-The game automatically detects draw situations when:
-
-- All nine cells are occupied.
-- No winning combination exists.
-
-A draw message is displayed and the game ends.
+| Technology         | Role                                  |
+| ------------------ | ------------------------------------- |
+| **HTML5**          | Application structure                 |
+| **CSS3**           | UI styling, layout and responsiveness |
+| **JavaScript ES6** | Game logic, state and interactions    |
+| **Git**            | Version control                       |
+| **GitHub**         | Source code management                |
+| **Vercel**         | Production deployment                 |
 
 ---
 
-## 🔄 Game Reset
+# ⚙️ Engineering Concepts
 
-Players can:
+### JavaScript
 
-- Reset the current match.
-- Start a completely new game.
-- Replay immediately after a win or draw.
+* DOM Manipulation
+* Event Handling
+* State Management
+* Functions
+* Arrays
+* Loops
+* Conditional Logic
+* Dynamic UI Updates
+
+### Game Engineering
+
+* Turn Management
+* Move Validation
+* Winner Detection
+* Draw Detection
+* Game Lifecycle Management
+* Score Management
+* Computer-Controlled Gameplay
+
+### Frontend Engineering
+
+* Responsive Web Design
+* Interactive UI
+* User Feedback
+* Event-Driven Programming
+* Browser Application Development
+
+---
+
+# 📱 Responsive by Design
+
+The interface is designed to work across different screen sizes:
+
+**Desktop · Laptop · Tablet · Mobile**
+
+The game board, controls, score information, and interactions adapt to smaller screens while maintaining usability.
 
 ---
 
 # 📂 Project Structure
 
 ```text
-tic-tac-toe/
+tic-tac-toe-game/
 │
 ├── index.html
 ├── style.css
 ├── app.js
-│
 └── README.md
 ```
 
 ---
 
-# 💡 Skills Demonstrated
+# 🎯 Key Takeaways
 
-## Frontend Development
+Building this project strengthened my understanding of how JavaScript can be used to create a complete interactive application rather than a static webpage.
 
-- Responsive Web Design
-- Interactive User Interfaces
-- Modern CSS Styling
-- UI/UX Principles
+### I practiced:
 
----
-
-## JavaScript Development
-
-- DOM Manipulation
-- Event Handling
-- State Management
-- Arrays & Iteration
-- Conditional Logic
-- Functions
-- Algorithm Design
+* Managing application state
+* Designing event-driven interactions
+* Implementing game algorithms
+* Updating the DOM dynamically
+* Handling multiple application states
+* Creating responsive interfaces
+* Building reusable game controls
+* Deploying a production frontend
 
 ---
 
-## Problem Solving
+# 🚀 Deployment
 
-- Winner Detection Logic
-- Draw Detection Logic
-- Turn Management
-- Application Flow Control
-- Dynamic UI Updates
+The application is deployed and publicly accessible through Vercel.
 
----
+### 🎮 Live Application
 
-## Software Engineering
-
-- Clean Code Practices
-- Modular JavaScript
-- Code Organization
-- Debugging
-- Logical Thinking
+**[tic-tac-toe-game-11.vercel.app](https://tic-tac-toe-game-11.vercel.app/)**
 
 ---
 
-# 🎯 Learning Outcomes
+# 🔮 Roadmap
 
-This project strengthened my understanding of:
+Potential future improvements:
 
-- JavaScript Game Development
-- DOM Manipulation
-- Event Listeners
-- State Management
-- Algorithm Design
-- Conditional Programming
-- Dynamic User Interfaces
-- Responsive Web Design
-- Frontend Application Development
-
----
-
-# ⚡ Performance
-
-- Lightweight application
-- Fast game execution
-- Responsive interface
-- Efficient JavaScript logic
-- Minimal resource usage
-- Optimized DOM updates
+* 🧠 More advanced computer strategy
+* 🎚️ Multiple difficulty levels
+* 🌐 Online multiplayer
+* 🏆 Global leaderboard
+* 📊 Match history
+* 👤 Player profiles
+* 🎨 Custom themes
+* 🔊 Sound effects
+* 🏅 Achievement system
 
 ---
 
-# 🌍 Browser Support
-
-| Browser | Support |
-|----------|:-------:|
-| Google Chrome | ✅ |
-| Microsoft Edge | ✅ |
-| Mozilla Firefox | ✅ |
-| Safari | ✅ |
-| Opera | ✅ |
-
----
-
-# 🚀 Future Enhancements
-
-- 🤖 Single Player AI
-- 🧠 Minimax Algorithm
-- 🎯 Multiple Difficulty Levels
-- 🌐 Online Multiplayer
-- 👥 Player Profiles
-- 🏆 Leaderboard
-- 📈 Match Statistics
-- 🌙 Dark Mode
-- 🎵 Sound Effects
-- 🎨 Custom Themes
-- 💾 Match History
-- 🏅 Achievement System
-
----
-
-# 📈 Project Highlights
-
-- ✅ Complete Tic Tac Toe Gameplay
-- ✅ Winner Detection Algorithm
-- ✅ Draw Detection Logic
-- ✅ Dynamic Turn Management
-- ✅ Interactive User Interface
-- ✅ JavaScript State Management
-- ✅ Responsive Design
-- ✅ DOM Manipulation
-- ✅ Portfolio Ready
-- ✅ Beginner Friendly
-
----
-
-# ⚠️ Disclaimer
-
-This project was created for educational and portfolio purposes to demonstrate frontend development concepts, JavaScript programming, and algorithm implementation.
-
----
-
-# 👨‍💻 Developer
+# 👨‍💻 About the Developer
 
 ## Mohammad Naveed
 
-**Aspiring Java Full Stack Developer**
+B.Tech ECE student focused on building **backend systems, automation workflows, and scalable web applications**.
 
-Passionate about building scalable web applications while continuously learning Java, Spring Boot, React, Software Engineering, Cloud Computing, and System Design.
+Currently working with:
 
----
+**Java · Spring Boot · React · SQL · REST APIs · Git · Cloud Technologies**
 
-## 🌐 Connect With Me
+This project represents part of my progression from **frontend fundamentals toward full-stack and backend engineering**.
 
-### GitHub
+### Connect
 
-https://github.com/mohammadnaveed1701-source
+🌐 **Portfolio**
+https://portfolio1701.vercel.app/
 
-### LinkedIn
-
+💼 **LinkedIn**
 https://www.linkedin.com/in/mohammad-naveed-5294b2333/
 
----
-
-# 🤝 Contributing
-
-Contributions, suggestions, and feedback are always welcome.
-
-If you'd like to improve this project:
-
-1. Fork the repository.
-2. Create a new feature branch.
-3. Commit your changes.
-4. Push your branch.
-5. Open a Pull Request.
+🐙 **GitHub**
+https://github.com/mohammadnaveed1701-source
 
 ---
 
-# ⭐ Support
+<p align="center">
 
-If you found this project helpful, consider:
+### ⭐ If you enjoyed the project, consider starring the repository.
 
-⭐ Starring the repository
+**Built with HTML, CSS & JavaScript**
 
-🍴 Forking the project
+**Mohammad Naveed**
 
-💬 Sharing your feedback
+</p>
 
-Your support motivates me to continue building and sharing more projects.
-
----
-
-<div align="center">
-
-## 🚀 Thanks for Visiting!
-
-If you enjoyed exploring **Tic Tac Toe**, don't forget to **⭐ Star the repository**.
-
-Made with ❤️ by **Mohammad Naveed**
-
-</div>
