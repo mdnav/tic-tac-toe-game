@@ -262,7 +262,7 @@ https://portfolio1701.vercel.app/
 https://www.linkedin.com/in/mohammad-naveed-5294b2333/
 
 🐙 **GitHub**
-https://github.com/mohammadnaveed1701-source
+https://github.com/mdnav
 
 ---
 
