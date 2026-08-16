@@ -259,7 +259,7 @@ This project represents part of my progression from **frontend fundamentals towa
 https://portfolio1701.vercel.app/
 
 💼 **LinkedIn**
-https://www.linkedin.com/in/mohammad-naveed-5294b2333/
+https://www.linkedin.com/in/mdnav/
 
 🐙 **GitHub**
 https://github.com/mdnav
